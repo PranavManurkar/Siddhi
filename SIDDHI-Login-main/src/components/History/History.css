@@ -1,0 +1,38 @@
+.wrapperh {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    width: 80vw;
+}
+
+table { 
+    table-layout: fixed; 
+    border: 1px solid white;
+}
+
+td { 
+    text-align: center;
+    font-size: 15px;
+    padding: 1.5px; 
+    min-width: 18.6vw;
+    max-width: 18.6vw; 
+    overflow: auto; 
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+} 
+
+th {
+    text-align: center;
+    font-size: 16px;
+    padding: 2px; 
+    min-width: 18.6vw;
+    max-width: 18.6vw; 
+    overflow: auto;  
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
