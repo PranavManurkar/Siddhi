@@ -4,7 +4,9 @@ import { FaUser, FaLock } from "react-icons/fa";
 import axios from 'axios';
 
 const SignupForm = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [password, setPassword] = useState('');
   const [isRegistered, setIsRegistered] = useState(false);
   const [error, setError] = useState(null);
@@ -12,7 +14,7 @@ const SignupForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post('http://localhost:5000/signup', { username, password });
+      await axios.post('http://localhost:5000/signup', { email,firstName,lastName, password });
       setIsRegistered(true);
     } catch (err) {
       setError('User already exists or database error');
@@ -24,7 +26,15 @@ const SignupForm = () => {
       <form onSubmit={handleSubmit}>
         <h1>Signup</h1>
         <div className="input-box">
-          <input type="text" placeholder="Username" required value={username} onChange={(e) => setUsername(e.target.value)} />
+          <input type="text" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+          <FaUser className="icon" />
+        </div>
+        <div className="input-box">
+          <input type="text" placeholder="FirstName" required value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+          <FaUser className="icon" />
+        </div>
+        <div className="input-box">
+          <input type="text" placeholder="LastName" required value={lastName} onChange={(e) => setLastName(e.target.value)} />
           <FaUser className="icon" />
         </div>
         <div className="input-box">

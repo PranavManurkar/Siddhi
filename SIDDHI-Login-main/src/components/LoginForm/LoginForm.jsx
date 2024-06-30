@@ -5,7 +5,7 @@ import { FaUser, FaLock } from 'react-icons/fa';
 import axios from 'axios';
 
 const LoginForm = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const LoginForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/login', { username, password });
+      const res = await axios.post('http://localhost:5000/login', { email, password });
       if (res.data.success) {
         localStorage.setItem('token', res.data.token);
         navigate('/dashboard');
@@ -28,7 +28,7 @@ const LoginForm = () => {
       <form onSubmit={handleSubmit}>
         <h1>Login</h1>
         <div className="input-box">
-          <input type="text" placeholder="Username" required value={username} onChange={(e) => setUsername(e.target.value)} />
+          <input type="text" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
           <FaUser className="icon" />
         </div>
         <div className="input-box">
