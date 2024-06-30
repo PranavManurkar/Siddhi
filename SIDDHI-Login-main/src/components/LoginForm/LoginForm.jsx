@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './LoginForm.css';
 import { FaUser, FaLock } from 'react-icons/fa';
+import { FaAt } from "react-icons/fa";
 import axios from 'axios';
 
 const LoginForm = () => {
@@ -30,7 +31,7 @@ const LoginForm = () => {
         <h1>Login</h1>
         <div className="input-box">
           <input type="text" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
-          <FaUser className="icon" />
+          <FaAt className="icon" />
         </div>
         <div className="input-box">
           <input type="password" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)} />
