@@ -25,9 +25,18 @@
 
 .wrapper h2 {
   color: black;
-  font-size: 36px;
-  text-emphasis: center;
+  font-size: 22px;
   text-align: center;
+  margin-top: 2px;
+}
+
+.wrapper h3 {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 2px;
+  text-decoration: underline;
+  text-shadow: black;
 }
 
 .wrapper .nselect {
@@ -78,4 +87,3 @@
   margin-top: 20px;
 }
   
-
