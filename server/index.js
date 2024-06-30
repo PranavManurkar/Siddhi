@@ -24,7 +24,9 @@ const createTables = async () => {
     await db.query(`
         CREATE TABLE IF NOT EXISTS users (
             id INT AUTO_INCREMENT PRIMARY KEY,
-            username VARCHAR(50) NOT NULL UNIQUE,
+            email VARCHAR(50) NOT NULL UNIQUE,
+            first_name VARCHAR(50) NOT NULL UNIQUE,
+            last_name VARCHAR(50) NOT NULL UNIQUE,
             password_hash VARCHAR(255) NOT NULL
         )
     `);
@@ -45,11 +47,11 @@ createTables();
 
 
 app.post('/signup', async (req, res) => {
-    const { username, password } = req.body;
+    const { email,firstName,lastName, password } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
 
     try {
-        await db.query('INSERT INTO users (username, password_hash) VALUES (?, ?)', [username, hashedPassword]);
+        await db.query('INSERT INTO users (email,first_name,last_name, password_hash) VALUES (?,?,?,?)', [email,firstName,lastName, hashedPassword]);
         res.status(201).send({ success: 'User registered successfully' });
     } catch (error) {
         console.error(error);
@@ -58,10 +60,10 @@ app.post('/signup', async (req, res) => {
 });
 
 app.post('/login', async (req, res) => {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
 
     try {
-        const [rows] = await db.query('SELECT * FROM users WHERE username = ?', [username]);
+        const [rows] = await db.query('SELECT * FROM users WHERE email = ?', [email]);
         if (rows.length === 0) {
             return res.status(401).send({ error: 'Invalid credentials' });
         }
