@@ -1,12 +1,13 @@
 .wrapperf {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgb(0,57,109);
+    background: linear-gradient(0deg, rgba(0,57,109,0.8) 6%, rgba(0,104,171,0.8) 82%);
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(60px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     color: #fff;
     border-radius: 10px;
     padding: 30px 40px;
-    width: 80vw;
+    width: 60vw;
     height: 60vh;
 }
 
