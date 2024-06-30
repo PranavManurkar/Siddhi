@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import './SignupForm.css';
 import { FaUser, FaLock } from "react-icons/fa";
+import { FaAt } from "react-icons/fa";
 import axios from 'axios';
 
 const SignupForm = () => {
@@ -28,7 +29,7 @@ const SignupForm = () => {
         <h1>Signup</h1>
         <div className="input-box">
           <input type="text" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
-          <FaUser className="icon" />
+          <FaAt className="icon" />
         </div>
         <div className="input-box">
           <input type="text" placeholder="FirstName" required value={firstName} onChange={(e) => setFirstName(e.target.value)} />
