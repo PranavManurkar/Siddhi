@@ -1,22 +1,28 @@
 .wrapper {
-    background: transparent;
+    background: rgb(0, 57, 109);
+    background: linear-gradient(0deg, rgba(0, 57, 109, 0.8) 6%, rgba(0, 104, 171, 0.8) 82%);  
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(30px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     color: #fff;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 30px 40px;
 }
 
 .wrapper-top {
     width: 100vw;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
+    height: 60px;
+    background: rgb(0,57,109);
+    background: linear-gradient(0deg, rgba(0,57,109,0.8) 6%, rgba(0,104,171,0.8) 82%);
     backdrop-filter: blur(30px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     color: #fff;
-    border-radius: 10px;
-    padding: 30px 40px;
+    border-radius: 8px;
+    /* padding: 21px 40px; */
+    padding-top: 18px;
+    padding-bottom: 22px;
+    padding-left: 25px;
+    padding-right: 21px;
     position: fixed;
     top: 0;
     left: 0;
@@ -25,14 +31,14 @@
 
 .wrapper h2 {
   color: black;
-  font-size: 22px;
+  font-size: 18px;
   text-align: center;
   margin-top: 2px;
 }
 
 .wrapper h3 {
   color: white;
-  font-size: 22px;
+  font-size: 18px;
   text-align: center;
   margin-top: 2px;
   text-decoration: underline;
@@ -41,17 +47,17 @@
 
 .wrapper .nselect {
     width: 100%;
-    height: 50px;
-    margin: 30px;
+    height: 18px;
+    padding-top: 8px;
+    padding-bottom: 10px;
 }
 
 .wrapper-top ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    /* margin: 0;
+    padding: 0; */
     background: transparent;
-    font-size: large;
+    font-size: 18px;
   }
   
   li {
@@ -62,13 +68,12 @@
     display: block;
     color: white;
     text-align: center;
-    padding: 2px 30px;
+    padding-right: 24px;
     text-decoration: none;
   }
   
-  /* Change the link color to #111 (black) on hover */
   li a:hover {
-    background-color: #111;
+    text-decoration: underline;
   }
 
 .uploadf {
@@ -78,6 +83,12 @@
 
 .upload {
   margin-top: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+  border-radius: 8px;
+  font-size: 18px; /* Adjust font size */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor on hover */
 }
 
 .spinner-container {
@@ -87,3 +98,4 @@
   margin-top: 20px;
 }
   
+
