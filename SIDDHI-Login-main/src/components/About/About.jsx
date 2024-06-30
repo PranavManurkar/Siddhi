@@ -17,10 +17,10 @@ const About = () => {
         <div className='wrapperf'>
         <h1>About Us</h1>
         <p>Welcome to our Alzheimer's Detection Interface. This innovative tool has been developed by a dedicated team of students with the aim of providing a simple and effective way to screen for Alzheimer's disease using EEG recordings.</p>
-
+        <br></br>
         <h2>Our Mission</h2>
         <p>Our mission is to leverage technology to aid in the early detection of Alzheimer's disease, making it accessible and convenient for healthcare providers and patients alike. By utilizing advanced machine learning algorithms, we strive to deliver accurate and reliable results.</p>
-
+        <br></br>
         <h2>How It Works</h2>
         <p>The Alzheimer's Detection Interface is designed to be user-friendly and efficient. Here's how it works:</p>
         <ul>
