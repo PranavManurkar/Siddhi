@@ -19,7 +19,7 @@ const SignupForm = () => {
       await axios.post('http://localhost:5000/signup', { email,firstName,lastName, password });
       setIsRegistered(true);
     } catch (err) {
-      console.error('User already exists or database error');
+      setError(alert('User already exists or database error'));
     }
   };
 
