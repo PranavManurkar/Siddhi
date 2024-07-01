@@ -4,6 +4,7 @@ import axios from 'axios';
 import './HomePage.css';
 import Spinner from './Spinner';  
 import RenderImage from './RenderImage';
+import Disclaimer from '../Disclaimer/Disclaimer';
 
 const HomePage = () => {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -95,6 +96,7 @@ const HomePage = () => {
                     </div>
                 )}
             </div>
+            <Disclaimer />
         </div>
     );
 }
