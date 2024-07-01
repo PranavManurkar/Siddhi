@@ -21,7 +21,7 @@ const LoginForm = () => {
         navigate('/dashboard');
       }
     } catch (err) {
-      console.error('Invalid credentials');
+      setError(alert('Invalid credentials'));
     }
   };
 
