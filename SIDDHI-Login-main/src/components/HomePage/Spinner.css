@@ -1,11 +1,11 @@
 .spinner {
     border: 4px solid rgba(0, 0, 0, 0.1);
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    border-left-color: #09f;
+    border-left-color: #F97316;
     animation: spin 1s ease infinite;
-    margin-top: 20px; /* Adjust the value as needed */
+    margin-top: 18px; /* Adjust the value as needed */
 }
 
 @keyframes spin {

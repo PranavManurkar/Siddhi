@@ -97,5 +97,20 @@
   align-items: center;
   margin-top: 20px;
 }
+
+/* HomePage.css */
+
+.image-container {
+  margin-top: 10px;
+  max-width: 100%; /* Adjust as needed */
+  max-height: 100%; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+}
+
   
 

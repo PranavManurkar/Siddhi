@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './HomePage.css';
 import Spinner from './Spinner';  
+import RenderImage from './RenderImage';
 
 const HomePage = () => {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -27,31 +28,41 @@ const HomePage = () => {
         setError(null);
 
         try {
-            const res = await axios.post(' https://dea1-34-125-142-187.ngrok-free.app/pred', formData, {
+            const res = await axios.post('http://localhost:8000/pred', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             });
             setResponse(res.data);
 
-            // Save the file information to the database
-            const token = localStorage.getItem('token');
-            const filename = selectedFile.name;
-            const result = res.data.prediction;  // Assuming the response has a 'prediction' field
-            const date = new Date().toLocaleDateString();
-            const time = new Date().toLocaleTimeString();
+            // // Save the file information to the database
+            // const token = localStorage.getItem('token');
+            // const filename = selectedFile.name;
+            // const result = res.data.prediction;  // Assuming the response has a 'prediction' field
+            // const date = new Date().toLocaleDateString();
+            // const time = new Date().toLocaleTimeString();
 
-            await axios.post('http://localhost:5000/history', { filename, result, date, time }, {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            });
-        } catch (err) {
+            // await axios.post('http://localhost:5000/history', { filename, result, date, time }, {
+            //     headers: {
+            //         Authorization: `Bearer ${token}`
+            //     }
+            // });
+        } 
+        catch (err) {
             setError(err);
-        } finally {
+        } 
+        finally {
             setLoading(false);
         }
     };
+
+    const customStringify = (obj) => {
+        if (typeof obj === 'object' && obj !== null) {
+            return Object.values(obj).join(', ');
+        }
+        return obj;
+    };
+    
 
     return (
         <div>
@@ -79,7 +90,8 @@ const HomePage = () => {
                 {response && (
                     <div>
                         <h2>Response</h2>
-                        <h2><pre>{JSON.stringify(response.prediction, null, 2)}</pre></h2>
+                        <h3>{customStringify(response.prediction)}</h3>
+                        {response.image && <RenderImage imageData={response.image} />}
                     </div>
                 )}
             </div>
