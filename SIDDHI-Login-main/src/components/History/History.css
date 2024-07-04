@@ -41,11 +41,12 @@ td, th {
 /* Responsive adjustments for very small screens */
 @media (max-width: 480px) {
     .wrapperh {
+        width: 95vw;
         padding: 3vw 4vw;
     }
     
     td, th {
-        font-size: 3vw; /* Further increase font-size */
-        padding: 2vw; /* Further increase padding */
+        font-size: 3.8vw; /* Further increase font-size */
+        padding: 2vh 2vw; /* Further increase padding */
     }
 }
