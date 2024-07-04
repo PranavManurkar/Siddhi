@@ -18,7 +18,7 @@
     backdrop-filter: blur(30px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     color: #fff;
-    border-radius: 8px;
+    border-radius: 0px;
     /* padding: 21px 40px; */
     padding-top: 18px;
     padding-bottom: 22px;
@@ -116,6 +116,12 @@
 @media (max-width: 480px) {
   .wrapper-top ul {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 95vw;
   }
 }
 

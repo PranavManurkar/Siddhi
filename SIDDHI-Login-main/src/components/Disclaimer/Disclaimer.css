@@ -9,7 +9,7 @@
     bottom: 0;
   
     padding-top: 20px;
-    padding-bottom: 22px;
+    padding-bottom: 20px;
   
     text-align: center;
   
@@ -20,3 +20,16 @@
     font-size: 14px;
     color: black;
 }
+
+@media (max-width: 480px) {
+    .footer{
+        height: 9.5vh;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        justify-content: center;
+    }
+    .footer .text{
+        font-size: 10px;
+    }
+}
+
