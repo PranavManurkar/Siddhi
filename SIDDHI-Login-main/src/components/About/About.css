@@ -9,6 +9,7 @@
     padding: 30px 40px;
     width: 60vw;
     height: 60vh;
+    overflow: auto;
 }
 
 .align {
