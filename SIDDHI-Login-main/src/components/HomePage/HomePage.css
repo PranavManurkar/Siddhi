@@ -1,6 +1,6 @@
 .wrapper {
     background: rgb(0, 57, 109);
-    background: linear-gradient(0deg, rgba(0, 57, 109, 0.8) 6%, rgba(0, 104, 171, 0.8) 82%);  
+    background: linear-gradient(0deg, rgba(0, 57, 109, 0.4) 6%, rgba(0, 104, 171, 0.4) 82%);  
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(30px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
@@ -12,8 +12,8 @@
 .wrapper-top {
     width: 100vw;
     height: 60px;
-    background: rgb(0,57,109);
-    background: linear-gradient(0deg, rgba(0,57,109,0.8) 6%, rgba(0,104,171,0.8) 82%);
+    background: rgb(0, 57, 109);
+    background: linear-gradient(0deg, rgba(0, 57, 109, 0.4) 6%, rgba(0, 104, 171, 0.4) 82%);    
     backdrop-filter: blur(30px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     color: #fff;

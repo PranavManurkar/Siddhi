@@ -16,8 +16,8 @@ body {
   align-items: center;
   min-width: 100vh;
   min-height: 100vh;
-  /* background: url('./components/assets/steven-hwg-zBsdRTHIIm4-unsplash.jpg') no-repeat; */
-  background-color: #fff;
+  background: url('./components/assets/steven-hwg-zBsdRTHIIm4-unsplash.jpg') no-repeat;
+  /* background-color: #fff; */
   background-size: cover;
   background-position: center;
 }

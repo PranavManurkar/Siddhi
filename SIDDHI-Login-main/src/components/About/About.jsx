@@ -1,7 +1,22 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
 import './About.css';
+import { getAuthInstance } from '../../services/db.mjs';
 
 const About = () => {
+
+    const auth = getAuthInstance();
+    const navigate = useNavigate();
+    const handleLogout = () => {               
+        signOut(auth).then(() => {
+        // Sign-out successful.
+            navigate("/");
+            console.log("Signed out successfully")
+        }).catch((error) => {
+        // An error happened.
+        });
+    }
+
     return (
         <div>
             <div className="wrapper-top">
@@ -10,7 +25,7 @@ const About = () => {
                     <li><Link to="/history">History</Link></li>
                     <li><Link to="/dashboard">Working</Link></li>
                     <li><Link to="/about">About</Link></li>
-                    <li><Link to="/">Logout</Link></li>
+                    <li><Link to="/" onClick={handleLogout}>Logout</Link></li>
                 </ul>
             </div>
         </div>
