@@ -94,7 +94,7 @@ const LoginForm = () => {
         } catch (error) {
             console.error('Error signing in:', error.message);
             setError('Invalid credentials'); // Set error message
-            alert("Invalid credentials")
+            setError(alert("Invalid credentials"))
         }
     };
 
