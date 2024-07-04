@@ -29,7 +29,8 @@ const History = () => {
               setCurrentUser(user);
           } else {
               setCurrentUser(null);
-          }
+              alert("User not logged in!");
+            }
       });
 
       return () => unsubscribe();

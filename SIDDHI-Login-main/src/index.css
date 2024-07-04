@@ -33,6 +33,7 @@ code {
   body {
     font-size: 4vw;
     padding: 10vw;
+    background-size: auto 100vh; /* Ensure height covers the viewport and width adjusts automatically */
   }
   
   .wrapperh {
@@ -53,6 +54,8 @@ code {
   body {
     font-size: 4vw;
     padding: 12vw;
+    background-size: auto 100vh; /* Ensure height covers the viewport and width adjusts automatically */
+    background-position: center;
   }
   
   .wrapperh {

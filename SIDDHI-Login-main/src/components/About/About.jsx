@@ -1,12 +1,26 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { signOut } from 'firebase/auth';
+import { signOut, onAuthStateChanged } from 'firebase/auth';
 import './About.css';
 import { getAuthInstance } from '../../services/db.mjs';
+import { useState, useEffect } from 'react';
 
 const About = () => {
-
+    const [currentUser, setCurrentUser] = useState(null);
     const auth = getAuthInstance();
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setCurrentUser(user);
+            } else {
+                setCurrentUser(null);
+                alert("User not logged in!");
+              }
+        });
+  
+        return () => unsubscribe();
+    }, [auth]);
     const handleLogout = () => {               
         signOut(auth).then(() => {
         // Sign-out successful.

@@ -25,11 +25,13 @@ const HomePage = () => {
                 setCurrentUser(user);
             } else {
                 setCurrentUser(null);
+                alert("User not logged in!");
             }
         });
-
+    
         return () => unsubscribe();
     }, [auth]);
+    
 
     const handleLogout = () => {               
         signOut(auth).then(() => {
@@ -56,6 +58,11 @@ const HomePage = () => {
     const handleUpload = async () => {
         if (!selectedFile) {
             alert("Please select a file first!");
+            return;
+        }
+
+        if(currentUser == null){
+            alert("Please login first and then revisit")
             return;
         }
 
